@@ -50,9 +50,9 @@ Edit `src/data/products.ts`. The `Product` contract is in `src/types/commerce.ts
 
 See `docs/PRODUCT_MANAGEMENT.md` for the full checklist.
 
-## Replace images
+## Image library
 
-All current visuals in `public/images/` are local placeholders with explicit dimensions. Replace them with optimized, rights-cleared files while preserving the referenced filenames or updating product/blog data.
+The site now uses a coordinated set of original AI-generated WebP brand visuals with explicit dimensions. They are illustrative assets, not evidence of exact products, people or facilities. Review every image against the verified catalogue and replace illustrative scenes with rights-cleared photography when documentary accuracy is required.
 
 Required real photography before launch:
 
@@ -102,7 +102,7 @@ Set `NEXT_PUBLIC_GA_ID` to a valid public GA measurement ID. The analytics scrip
 ## SEO checklist
 
 - Replace demonstration metadata, catalogue and business details.
-- Replace SVG social/product placeholders with high-quality optimized images.
+- Review generated social and product imagery against the final verified catalogue.
 - Confirm canonical production origin remains `https://buyfootball.store`.
 - Run the build to regenerate `public/sitemap.xml`.
 - Test `robots.txt`, structured data, internal links, 404 and country-page originality.
@@ -125,7 +125,7 @@ The workflow at `.github/workflows/deploy.yml` runs on pushes to `main` and manu
 
 ## Launch checklist
 
-1. Replace all demonstration catalogue, testimonials and imagery.
+1. Verify the demonstration catalogue and replace sample testimonials; approve or replace illustrative imagery.
 2. Verify company identity, email, WhatsApp, social links and address.
 3. Approve pricing, MOQ, stock, shipping, returns, terms and privacy text.
 4. Test all product variants and order/inquiry channels.

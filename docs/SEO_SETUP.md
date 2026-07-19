@@ -54,7 +54,7 @@ The current order-request-only flow may not meet every marketplace program’s c
 
 ## Image naming and alt text
 
-Use descriptive names such as `elite-pro-match-ball-front.webp`, not camera filenames. Alt text should identify the product and useful visible detail without keyword stuffing. Decorative graphics should use empty alt text. Keep explicit dimensions to reduce layout shift.
+Use descriptive names such as `elite-pro-match-ball-front.webp`, not camera filenames. Alt text should identify the product and useful visible detail without keyword stuffing. Decorative graphics should use empty alt text. Keep explicit dimensions to reduce layout shift. The current AI-generated imagery is illustrative and must not be presented as proof of a product specification or facility.
 
 ## Internal linking
 

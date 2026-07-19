@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   applicationName: siteConfig.name,
   alternates: { canonical: "/" },
-  openGraph: { type: "website", locale: "en_US", siteName: siteConfig.name, url: siteConfig.url, title: "BuyFootball.Store", description: siteConfig.description, images: [{ url: "/images/open-graph-football.svg", width: 1200, height: 630, alt: "BuyFootball.Store factory-direct footballs from Sialkot" }] },
-  twitter: { card: "summary_large_image", title: "BuyFootball.Store", description: siteConfig.description, images: ["/images/open-graph-football.svg"] },
+  openGraph: { type: "website", locale: "en_US", siteName: siteConfig.name, url: siteConfig.url, title: "BuyFootball.Store", description: siteConfig.description, images: [{ url: "/images/open-graph-football.webp", width: 1200, height: 630, alt: "Original unbranded football in the BuyFootball.Store navy and green palette" }] },
+  twitter: { card: "summary_large_image", title: "BuyFootball.Store", description: siteConfig.description, images: ["/images/open-graph-football.webp"] },
   icons: { icon: "/images/favicon.svg", apple: "/images/favicon.svg" },
   manifest: "/manifest.webmanifest",
 };

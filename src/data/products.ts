@@ -5,11 +5,11 @@ import type { Product, ProductCategory } from "@/types/commerce";
  * MOQ, description, image and payment link with verified business data before launch.
  */
 const categoryImage: Record<ProductCategory, string> = {
-  match: "/images/product-match-football.svg",
-  training: "/images/product-training-football.svg",
-  futsal: "/images/product-futsal-ball.svg",
-  kids: "/images/product-kids-football.svg",
-  custom: "/images/product-custom-football.svg",
+  match: "/images/product-match-football.webp",
+  training: "/images/product-training-football.webp",
+  futsal: "/images/product-futsal-ball.webp",
+  kids: "/images/product-kids-football.webp",
+  custom: "/images/product-custom-football.webp",
 };
 
 const base = {
@@ -25,7 +25,7 @@ function product(input: Omit<Product, "images" | "imageAlt" | "seoTitle" | "seoD
   return {
     ...input,
     images: input.images ?? [categoryImage[input.category]],
-    imageAlt: input.imageAlt ?? `${input.name} demonstration football product placeholder`,
+    imageAlt: input.imageAlt ?? `${input.name} shown in an original illustrative product image`,
     seoTitle: input.seoTitle ?? `${input.name} | BuyFootball.Store`,
     seoDescription: input.seoDescription ?? `${input.shortDescription} Factory-direct inquiry and worldwide delivery options.`,
   };

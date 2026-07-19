@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "BuyFootball.Store",
   description: "Premium factory-direct footballs from Sialkot, delivered worldwide.",
   url: "https://buyfootball.store",
-  email: "orders@buyfootball.store",
+  email: "mazharchdev@gmail.com",
   whatsapp: "923340096557",
   factoryLocation: "Sialkot, Punjab, Pakistan",
   socialLinks: {

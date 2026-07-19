@@ -68,7 +68,7 @@ Use descriptive lower-case filenames, record image dimensions and write accurate
 
 Update `src/config/site.ts`:
 
-- Contact email (currently a placeholder)
+- Contact email
 - WhatsApp number in international digits-only format
 - Factory/contact location and social profiles
 - Shipping message and supported currencies

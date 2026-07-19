@@ -84,7 +84,7 @@ export function absoluteUrl(path = "/") {
   return new URL(normalizePath(path), `${SITE_URL}/`).toString();
 }
 
-export function resolveOpenGraphImage(path = seoConfig.defaultOpenGraphImage) {
+export function resolveOpenGraphImage(path: string = seoConfig.defaultOpenGraphImage) {
   return absoluteUrl(path);
 }
 

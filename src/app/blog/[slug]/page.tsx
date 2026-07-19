@@ -27,7 +27,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const { slug } = await params;
   const article = articleBySlug(slug);
   if (!article) notFound();
-  const related = article.relatedSlugs.map((item) => articleBySlug(item)).filter((item) => item !== undefined && item.status !== "draft");
+  const related = article.relatedSlugs.flatMap((item) => {
+    const relatedArticle = articleBySlug(item);
+    return relatedArticle && relatedArticle.status !== "draft" ? [relatedArticle] : [];
+  });
   const relatedProducts = products.filter((product) => product.status !== "draft").slice(0, 3);
   const crumbs = [{ label: "Home", href: "/" }, { label: "Journal", href: "/blog/" }, { label: article.title }];
 

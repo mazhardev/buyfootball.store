@@ -3,7 +3,7 @@ import { failIfErrors, htmlDocuments, metaContent, titleFromHtml } from "./seo-v
 const errors = [];
 const warnings = [];
 for (const { route, html } of htmlDocuments()) {
-  if (route === "/404/") continue;
+  if (route === "/404/" || route === "/_not-found/") continue;
   const title = titleFromHtml(html);
   const description = metaContent(html, "description");
   const robots = metaContent(html, "robots").toLowerCase();

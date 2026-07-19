@@ -2,7 +2,7 @@ import { failIfErrors, htmlDocuments, jsonLdFromHtml, schemaTypes } from "./seo-
 
 const errors = [];
 for (const { route, html } of htmlDocuments()) {
-  if (route === "/404/") continue;
+  if (route === "/404/" || route === "/_not-found/") continue;
   let blocks;
   try { blocks = jsonLdFromHtml(html); } catch (error) { errors.push(`${route} contains invalid JSON-LD: ${error.message}`); continue; }
   const types = schemaTypes(blocks);

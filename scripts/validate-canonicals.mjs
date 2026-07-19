@@ -2,7 +2,7 @@ import { canonicalFromHtml, failIfErrors, htmlDocuments, origin } from "./seo-va
 
 const errors = [];
 for (const { route, html } of htmlDocuments()) {
-  if (route === "/404/") continue;
+  if (route === "/404/" || route === "/_not-found/") continue;
   const canonicals = canonicalFromHtml(html);
   if (canonicals.length !== 1) { errors.push(`${route} has ${canonicals.length} canonical tags.`); continue; }
   const expected = new URL(route, origin).toString();

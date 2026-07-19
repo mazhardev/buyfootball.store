@@ -1,4 +1,5 @@
 import { exchangeRates, siteConfig } from "@/config/site";
+import { absoluteUrl, canonicalUrl as buildCanonicalUrl } from "@/config/seo";
 import type { CartItem, Currency, Product, ProductFilters, ProductSort } from "@/types/commerce";
 
 export function formatCurrency(amount: number, currency: Currency = "USD") {
@@ -10,12 +11,11 @@ export function convertFromUsd(amount: number, currency: Currency) {
 }
 
 export function canonicalUrl(path = "/") {
-  const normalized = path.startsWith("/") ? path : `/${path}`;
-  return `${siteConfig.url}${normalized.endsWith("/") ? normalized : `${normalized}/`}`;
+  return buildCanonicalUrl(path);
 }
 
 export function assetUrl(path: string) {
-  return `${siteConfig.url}${path.startsWith("/") ? path : `/${path}`}`;
+  return absoluteUrl(path);
 }
 
 export function filterProducts(products: Product[], filters: ProductFilters) {

@@ -40,6 +40,15 @@ export interface Product {
   externalPaymentLink?: string;
   certificationLabel?: string;
   relatedProductIds: string[];
+  status: ContentStatus;
+  indexable: boolean;
+  launchReady: boolean;
+  commerceMode: CommerceMode;
+  priceVerified: boolean;
+  availabilityVerified: boolean;
+  shippingEligible: boolean;
+  gtin?: string;
+  mpn?: string;
 }
 
 export interface CartItem {
@@ -64,3 +73,5 @@ export interface ProductFilters {
 }
 
 export type ProductSort = "featured" | "price-asc" | "price-desc" | "name-asc";
+export type ContentStatus = "draft" | "review" | "published" | "archived";
+export type CommerceMode = "direct-purchase" | "payment-link" | "request-order" | "quote-only";

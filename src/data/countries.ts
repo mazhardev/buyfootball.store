@@ -1,8 +1,10 @@
 import type { Currency } from "@/types/commerce";
 
-export interface CountryPage { slug: string; name: string; term: "soccer balls" | "footballs"; currency: Currency; title: string; description: string; intro: string; shipping: string; marketNote: string; faq: { question: string; answer: string }[] }
+export interface CountryPage { slug: string; name: string; term: "soccer balls" | "footballs"; currency: Currency; title: string; description: string; intro: string; shipping: string; marketNote: string; faq: { question: string; answer: string }[]; locale: string; openGraphLocale: string; indexable: boolean; humanReviewed: boolean; translationComplete: boolean }
 
-export const countries: CountryPage[] = [
+const marketReview = { indexable: false, humanReviewed: false, translationComplete: true } as const;
+
+const baseCountries: Omit<CountryPage, "locale" | "openGraphLocale" | "indexable" | "humanReviewed" | "translationComplete">[] = [
   { slug: "usa", name: "United States", term: "soccer balls", currency: "USD", title: "Factory-Direct Soccer Balls for the USA", description: "Explore match, training and custom soccer balls manufactured in Sialkot for US clubs, schools, retailers and brands.", intro: "Source demonstration match, training, youth, futsal and custom soccer ball options for individual or organizational requirements in the United States.", shipping: "Orders ship internationally from Pakistan. Transit method, delivery estimate and freight cost are confirmed after carton volume and destination are known.", marketNote: "USD is available as the base display currency. We do not claim US inventory or a local warehouse.", faq: [{ question: "Do you keep inventory in the USA?", answer: "No local inventory is currently configured. Orders are arranged from Sialkot, Pakistan." }, { question: "Can US clubs add a logo?", answer: "Yes. Artwork, colors, construction, quantity and packaging are confirmed before production." }] },
   { slug: "uk", name: "United Kingdom", term: "footballs", currency: "GBP", title: "Factory-Direct Footballs for the UK", description: "Football supply and custom manufacturing options for UK clubs, academies, schools, retailers and brands.", intro: "Discuss match, training, junior, futsal and custom football requirements for clubs, schools, academies and trade buyers across the UK.", shipping: "International delivery is quoted from Sialkot after order size, service level and UK destination are confirmed.", marketNote: "GBP display values are static estimates; quotations can confirm the transaction currency. No UK warehouse is claimed.", faq: [{ question: "Can you supply footballs for an academy?", answer: "Academy packs, sizes and branding can be discussed against your training plan and quantity." }, { question: "Are import charges included?", answer: "Unless a quotation explicitly states otherwise, destination duties, VAT and handling charges are the buyer’s responsibility." }] },
   { slug: "germany", name: "Germany", term: "footballs", currency: "EUR", title: "Football Manufacturing Supply for Germany", description: "Explore factory-direct football and private-label options for German clubs, schools, retailers and promotional buyers.", intro: "Plan football orders for German clubs, education, retail and private-label programs with specifications discussed directly from the manufacturing source.", shipping: "Shipping method and timeline depend on volume, packing format and German destination. A quotation should state the agreed delivery basis.", marketNote: "EUR display values use a static estimate. German/EU import VAT, duty and compliance responsibilities must be confirmed for the actual order.", faq: [{ question: "Can product testing be discussed?", answer: "Yes. Custom testing requirements can be discussed for wholesale orders and must be written into the approved specification." }, { question: "Is German-language packaging available?", answer: "Packaging text and private-label requirements can be reviewed during artwork approval." }] },
@@ -13,4 +15,16 @@ export const countries: CountryPage[] = [
   { slug: "canada", name: "Canada", term: "soccer balls", currency: "CAD", title: "Factory-Direct Soccer Balls for Canada", description: "Soccer ball supply and customization for Canadian clubs, schools, academies, retailers and brands.", intro: "Plan soccer ball orders for Canadian training programs, matches, youth activities, retailers and branded campaigns with factory-direct specification support.", shipping: "Canadian delivery cost and estimate depend on province, quantity, carton dimensions and service. These are confirmed before order approval.", marketNote: "CAD values use a static display estimate. We do not claim Canadian stock. Taxes, duties and brokerage are destination considerations.", faq: [{ question: "Are youth soccer ball sizes available?", answer: "The demonstration catalogue includes sizes 3 and 4; confirm the organization’s required format before ordering." }, { question: "Can Canadian schools order in bulk?", answer: "Yes. Quantity, sizes, surface and delivery needs should be included in the wholesale inquiry." }] },
 ];
 
+const marketLocales: Record<string, { locale: string; openGraphLocale: string }> = {
+  usa: { locale: "en-US", openGraphLocale: "en_US" },
+  uk: { locale: "en-GB", openGraphLocale: "en_GB" },
+  germany: { locale: "en-DE", openGraphLocale: "en_DE" },
+  france: { locale: "en-FR", openGraphLocale: "en_FR" },
+  spain: { locale: "en-ES", openGraphLocale: "en_ES" },
+  italy: { locale: "en-IT", openGraphLocale: "en_IT" },
+  netherlands: { locale: "en-NL", openGraphLocale: "en_NL" },
+  canada: { locale: "en-CA", openGraphLocale: "en_CA" },
+};
+
+export const countries: CountryPage[] = baseCountries.map((country) => ({ ...country, ...marketReview, ...marketLocales[country.slug] }));
 export const countryBySlug = (slug: string) => countries.find((country) => country.slug === slug);

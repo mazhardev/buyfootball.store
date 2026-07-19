@@ -1,0 +1,25 @@
+import { createMetadata, createNoIndexMetadata } from "@/lib/seo/metadata";
+
+export const pageMetadata = {
+  shop: createMetadata({ title: "Shop Footballs Online", description: "Compare match, training, futsal, youth and custom football concepts manufactured in Sialkot for individual and organizational order inquiries.", path: "/shop/" }),
+  match: createMetadata({ title: "Match Footballs", description: "Compare match football concepts for fixtures and advanced preparation, including construction, size and playing-surface guidance.", path: "/match-balls/" }),
+  training: createMetadata({ title: "Training Footballs", description: "Explore training football concepts for repeated academy, school, club and individual sessions on common outdoor surfaces.", path: "/training-balls/" }),
+  futsal: createMetadata({ title: "Futsal Balls", description: "Explore controlled-rebound futsal ball concepts for indoor court training, close control and organized futsal play.", path: "/futsal-balls/" }),
+  kids: createMetadata({ title: "Kids Footballs | Size 3 and Size 4", description: "Compare size 3 and size 4 football concepts for developing players, with practical guidance for parents, coaches and schools.", path: "/kids-footballs/" }),
+  custom: createMetadata({ title: "Custom Footballs and Soccer Balls", description: "Plan custom logo footballs, original colors, construction and packaging with a specification-led manufacturing inquiry from Sialkot.", path: "/custom-footballs/" }),
+  wholesale: createMetadata({ title: "Wholesale Footballs and Bulk Soccer Balls", description: "Request factory-direct football supply for clubs, academies, schools, retailers, distributors and promotional buyers worldwide.", path: "/wholesale/" }),
+  privateLabel: createMetadata({ title: "Private-Label and OEM Football Manufacturing", description: "Develop an original private-label football range with structured product, artwork, sampling, packaging and quality planning.", path: "/private-label/" }),
+  about: createMetadata({ title: "About BuyFootball.Store", description: "Learn how BuyFootball.Store connects specification-led football development in Sialkot with retail, club, education and trade buyers worldwide.", path: "/about/" }),
+  factory: createMetadata({ title: "Football Manufacturing Process in Sialkot", description: "Understand a typical football development workflow covering specifications, materials, panel preparation, assembly, inspection and packing.", path: "/factory/" }),
+  quality: createMetadata({ title: "Football Quality-Control Process", description: "Review the material, construction, finish, shape, air-retention and packing checks that can form a documented football quality plan.", path: "/quality/" }),
+  shipping: createMetadata({ title: "Worldwide Football Shipping from Sialkot", description: "Understand production timing, international freight, customs, taxes and delivery planning for football orders shipped from Pakistan.", path: "/shipping/" }),
+  contact: createMetadata({ title: "Contact BuyFootball.Store", description: "Contact BuyFootball.Store about football products, custom logo projects, wholesale requirements, documentation and international shipping.", path: "/contact/" }),
+  faq: createMetadata({ title: "Football Ordering and Customization FAQs", description: "Read practical answers about football products, customization, wholesale inquiries, shipping, currency and static order requests.", path: "/faq/" }),
+  blog: createMetadata({ title: "Football Buying and Manufacturing Guides", description: "Read practical guides about football sizes, construction, playing surfaces, Sialkot manufacturing and custom club orders.", path: "/blog/" }),
+  privacy: createMetadata({ title: "Privacy Policy", description: "Review how BuyFootball.Store handles inquiry information, browser-local cart data and optional third-party services.", path: "/privacy-policy/" }),
+  terms: createMetadata({ title: "Terms and Conditions", description: "Review the starting terms for using BuyFootball.Store and submitting football product or order inquiries.", path: "/terms-and-conditions/" }),
+  returns: createMetadata({ title: "Returns Policy", description: "Review the starting returns guidance for standard and customized football orders, subject to final verified business terms.", path: "/returns-policy/" }),
+  cookies: createMetadata({ title: "Cookie and Local Storage Policy", description: "Learn how BuyFootball.Store uses browser-local storage and optional analytics on its static commerce website.", path: "/cookie-policy/" }),
+  cart: createNoIndexMetadata({ title: "Shopping Cart", description: "Review football selections saved in this browser before creating an order request.", path: "/cart/" }),
+  order: createNoIndexMetadata({ title: "Request an Order", description: "Create a structured WhatsApp or email request from football selections saved in this browser.", path: "/order/" }),
+} as const;

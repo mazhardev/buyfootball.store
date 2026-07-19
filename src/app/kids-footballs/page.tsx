@@ -1,2 +1,2 @@
-import type { Metadata } from "next"; import { CategoryPage } from "@/components/products/category-page"; import { canonicalUrl } from "@/lib/commerce";
-export const metadata: Metadata = { title: "Kids Footballs", description: "Explore size 3 and size 4 football concepts for developing players.", alternates: { canonical: canonicalUrl("/kids-footballs/") } }; export default function Page() { return <CategoryPage category="kids" />; }
+import { CategoryPage } from "@/components/products/category-page"; import { pageMetadata } from "@/config/page-metadata";
+export const metadata = pageMetadata.kids; export default function Page() { return <CategoryPage category="kids" />; }

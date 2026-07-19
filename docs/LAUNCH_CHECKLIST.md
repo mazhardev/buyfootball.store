@@ -6,7 +6,7 @@
 - [ ] All demonstration products replaced or signed off line by line
 - [ ] Prices, comparison prices, sizes, colors, specifications, stock and MOQ verified
 - [ ] Certification/testing claims supported by retained documentation
-- [ ] Sample testimonials and sample rating removed or replaced with permissioned evidence
+- [x] Sample testimonials removed; decorative stars remain aria-hidden and are not rating data
 - [ ] Real product, factory, packaging, QC and customization photography installed
 - [ ] Copyright/trademark rights checked for every name, logo, image and artwork
 - [ ] Factory, quality, shipping and article content reviewed by operational owners
@@ -31,7 +31,7 @@
 
 ## Technical and accessibility
 
-- [ ] `npm run lint`, `npm run typecheck` and `npm run build` pass
+- [ ] `npm run lint`, `npm run typecheck`, `npm run build` and `npm run seo:validate` pass
 - [ ] Export includes index, 404, products, articles, countries, sitemap and robots
 - [ ] Keyboard navigation, focus, Escape/overlay dialogs and mobile menu tested
 - [ ] Labels, errors, headings, alt text, contrast and reduced motion reviewed

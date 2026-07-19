@@ -35,6 +35,10 @@ jobs:
         run: npm run typecheck
       - name: Build static export
         run: npm run build
+      - name: Validate exported SEO
+        run: npm run seo:validate
+      - name: Enforce launch readiness
+        run: npm run seo:launch-check:deploy
       - name: Verify export and disable Jekyll
         run: |
           test -d out

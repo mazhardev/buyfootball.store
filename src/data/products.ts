@@ -19,6 +19,13 @@ const base = {
   stockStatus: "In stock" as const,
   minimumWholesaleQuantity: 50,
   certificationLabel: "Certification information available on request",
+  status: "review" as const,
+  indexable: false,
+  launchReady: false,
+  commerceMode: "request-order" as const,
+  priceVerified: false,
+  availabilityVerified: false,
+  shippingEligible: false,
 };
 
 function product(input: Omit<Product, "images" | "imageAlt" | "seoTitle" | "seoDescription"> & Partial<Pick<Product, "images" | "imageAlt" | "seoTitle" | "seoDescription">>): Product {

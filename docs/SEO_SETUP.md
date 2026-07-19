@@ -1,4 +1,6 @@
-# SEO setup
+# SEO setup (legacy quick reference)
+
+The current operational guide is `docs/SEO_README.md`; the audit and implementation record are `docs/SEO_AUDIT.md` and `docs/SEO_IMPLEMENTATION_REPORT.md`.
 
 The site uses canonical origin `https://buyfootball.store`, page-level metadata, Open Graph/Twitter tags, semantic headings, internal links, local images, JSON-LD and a build-time sitemap. SEO is an accurate publishing practice, not a ranking guarantee.
 
@@ -19,7 +21,7 @@ Add the site directly or import the verified Search Console property. Verify own
 
 ## Sitemap and robots
 
-`npm run build` executes `scripts/generate-sitemap.mjs`. It reads slugs from the central product and blog data and combines them with static/country routes in `public/sitemap.xml`. `public/robots.txt` allows crawling and references the production sitemap.
+`npm run build` generates an allowlisted sitemap and an empty gated merchant feed. Demo products, review articles, unreviewed country pages and utility routes are excluded. `public/robots.txt` allows crawling and references the production sitemap.
 
 After changing a slug, build again and verify the old URL strategy. GitHub Pages has no native redirect rules; preserve valuable slugs or move to hosting that supports redirects.
 
@@ -40,7 +42,7 @@ Replace all demonstration product records. Use stable, unique slugs; original na
 
 ## Product feed / Google Merchant Center preparation
 
-The current site does not generate a Merchant Center feed. Before creating one, establish:
+The site generates a valid empty Merchant Center feed. Before adding any item, establish:
 
 - Stable product IDs and landing URLs
 - Accurate price, currency, availability and condition

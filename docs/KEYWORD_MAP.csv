@@ -1,0 +1,32 @@
+page_path,page_type,primary_intent,secondary_topics,status
+/,home,"factory-direct footballs from Sialkot","custom; wholesale; international supply",indexable
+/shop/,catalogue,"shop footballs online","match; training; futsal; kids; custom",indexable_demo_catalogue
+/match-balls/,category,"match footballs","fixture use; construction; surface",indexable_demo_catalogue
+/training-balls/,category,"training footballs","academy; school; repeated sessions",indexable_demo_catalogue
+/futsal-balls/,category,"futsal balls","controlled rebound; indoor court",indexable_demo_catalogue
+/kids-footballs/,category,"kids footballs","size 3; size 4; youth guidance",indexable_demo_catalogue
+/custom-footballs/,service,"custom footballs","club logo; colors; packaging",indexable
+/wholesale/,b2b,"wholesale footballs","bulk; clubs; schools; retailers",indexable
+/private-label/,b2b,"private-label football manufacturer","OEM; packaging; product development",indexable
+/factory/,trust,"football manufacturing process","Sialkot; stitching; assembly",indexable
+/quality/,trust,"football quality control","materials; shape; air retention",indexable
+/shipping/,service,"international football shipping","freight; customs; duties",indexable
+/blog/,editorial_hub,"football buying guides","sizes; surfaces; manufacturing",indexable
+/blog/how-to-choose-the-right-football-size/,guide,"football size guide","size 3; size 4; size 5; futsal",review_noindex
+/blog/match-football-vs-training-football/,guide,"match vs training football","use; durability; construction",review_noindex
+/blog/hand-stitched-vs-machine-stitched-footballs/,guide,"hand stitched vs machine stitched football","construction; materials",review_noindex
+/blog/how-footballs-are-manufactured-in-sialkot/,guide,"how footballs are manufactured","Sialkot; panels; stitching",review_noindex
+/blog/how-to-order-custom-footballs-for-a-club/,guide,"custom club football order","artwork; sampling; quantities",review_noindex
+/blog/choosing-footballs-for-grass-and-artificial-turf/,guide,"football for grass vs artificial turf","surface; wear; care",review_noindex
+/contact/,contact,"contact football supplier","custom; wholesale; support",indexable
+/faq/,support,"football ordering FAQs","shipping; customization; wholesale",indexable
+/usa/,market,"soccer balls for USA","custom; wholesale; shipping",unreviewed_noindex
+/uk/,market,"footballs for UK","clubs; academies; shipping",unreviewed_noindex
+/canada/,market,"soccer balls for Canada","schools; custom; shipping",unreviewed_noindex
+/germany/,market,"footballs for Germany","private label; shipping; packaging",unreviewed_noindex
+/france/,market,"footballs for France","clubs; custom; shipping",unreviewed_noindex
+/spain/,market,"footballs for Spain","futsal; academies; shipping",unreviewed_noindex
+/italy/,market,"footballs for Italy","clubs; retail; packaging",unreviewed_noindex
+/netherlands/,market,"footballs for Netherlands","wholesale; clubs; shipping",unreviewed_noindex
+/cart/,utility,"saved cart","local order request",noindex
+/order/,utility,"football order request","WhatsApp; email",noindex

@@ -1,7 +1,9 @@
 export interface ArticleSection { id: string; heading: string; paragraphs: string[]; bullets?: string[] }
-export interface Article { slug: string; title: string; description: string; author: string; publishedDate: string; updatedDate: string; readingTime: string; category: string; heroImage: string; sections: ArticleSection[]; relatedSlugs: string[] }
+import type { ContentStatus } from "@/types/commerce";
 
-const shared = { author: "BuyFootball.Store Editorial Team", publishedDate: "2026-01-15", updatedDate: "2026-07-01" };
+export interface Article { slug: string; title: string; description: string; author: string; publishedDate: string; updatedDate: string; readingTime: string; category: string; heroImage: string; sections: ArticleSection[]; relatedSlugs: string[]; status: ContentStatus; indexable: boolean; launchReady: boolean }
+
+const shared = { author: "BuyFootball.Store Editorial Team", publishedDate: "2026-01-15", updatedDate: "2026-07-01", status: "review" as const, indexable: false, launchReady: false };
 
 export const articles: Article[] = [
   { ...shared, slug: "how-to-choose-the-right-football-size", title: "How to Choose the Right Football Size", description: "A practical guide to sizes 3, 4, 5 and futsal formats for players, parents, schools and clubs.", heroImage: "/images/blog-football-size-guide.webp", readingTime: "6 min read", category: "Buying guides", relatedSlugs: ["match-football-vs-training-football", "choosing-footballs-for-grass-and-artificial-turf"], sections: [

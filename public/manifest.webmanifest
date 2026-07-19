@@ -1,0 +1,10 @@
+{
+  "name": "BuyFootball.Store",
+  "short_name": "BuyFootball",
+  "description": "Premium factory-direct footballs from Sialkot, delivered worldwide.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#071525",
+  "icons": [{ "src": "/images/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

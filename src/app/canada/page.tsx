@@ -1,0 +1,1 @@
+import { CountryPage, countryMetadata } from "@/components/country-page"; import { countries } from "@/data/countries"; const country = countries[7]; export const metadata = countryMetadata(country); export default function Page() { return <CountryPage country={country} />; }

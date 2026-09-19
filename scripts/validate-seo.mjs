@@ -1,6 +1,6 @@
 import { spawnSync } from "node:child_process";
 
-const scripts = ["validate-sitemap.mjs", "validate-canonicals.mjs", "validate-metadata.mjs", "validate-structured-data.mjs", "check-internal-links.mjs", "validate-merchant-feed.mjs"];
+const scripts = ["validate-sitemap.mjs", "validate-canonicals.mjs", "validate-metadata.mjs", "validate-structured-data.mjs", "check-internal-links.mjs", "validate-merchant-feed.mjs", "validate-analytics.mjs"];
 let failed = false;
 for (const script of scripts) {
   const result = spawnSync(process.execPath, [`scripts/${script}`], { stdio: "inherit" });

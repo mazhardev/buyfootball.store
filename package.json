@@ -17,6 +17,7 @@
     "seo:validate-schema": "node scripts/validate-structured-data.mjs",
     "seo:validate-links": "node scripts/check-internal-links.mjs",
     "seo:validate-feed": "node scripts/validate-merchant-feed.mjs",
+    "seo:validate-analytics": "node scripts/validate-analytics.mjs",
     "seo:launch-check": "node scripts/check-launch-readiness.mjs",
     "seo:launch-check:deploy": "node scripts/check-launch-readiness.mjs --deployment"
   },

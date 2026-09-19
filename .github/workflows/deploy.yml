@@ -20,6 +20,9 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+env:
+  NEXT_PUBLIC_GA_ID: ${{ vars.NEXT_PUBLIC_GA_ID }}
+
 jobs:
   build:
     runs-on: ubuntu-latest

@@ -19,7 +19,7 @@ export const launchChecks: readonly LaunchCheck[] = [
   { id: "factory", label: "Factory claims verified", complete: false, critical: true, manualAction: "Verify visible Sialkot manufacturing statements and replace illustrative scenes with real evidence where required." },
   { id: "certifications", label: "Certification claims verified", complete: false, critical: true, manualAction: "Add only product-specific documented certifications." },
   { id: "legal", label: "Legal pages reviewed", complete: false, critical: true, manualAction: "Obtain qualified review for privacy, cookies, sales terms and returns." },
-  { id: "analytics", label: "Analytics configured", complete: false, critical: false, manualAction: "Set NEXT_PUBLIC_GA_ID after consent review." },
+  { id: "analytics", label: "Analytics configured", complete: true, critical: false, manualAction: "Monitor GA4 real-time reporting and complete consent review for every served market." },
   { id: "search-console", label: "Search Console verification configured", complete: false, critical: false, manualAction: "Set the public verification token and verify the DNS property." },
   { id: "sitemap", label: "Sitemap validation implemented", complete: true, critical: true, manualAction: "Run npm run seo:validate after every production build." },
   { id: "merchant-feed", label: "Merchant feed has launch-ready products", complete: false, critical: false, manualAction: "Mark only verified, purchasable products launchReady before Merchant Center submission." },

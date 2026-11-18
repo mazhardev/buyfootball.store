@@ -97,7 +97,7 @@ Add a verified HTTPS URL to `externalPaymentLink` for a product. The external pr
 
 ### Analytics
 
-Set `NEXT_PUBLIC_GA_ID` to a valid public GA measurement ID. The analytics scripts are omitted completely when blank. Review consent obligations and update the privacy/cookie text before enabling it.
+Set `NEXT_PUBLIC_GA_ID` to a valid public Google tag ID (`GTM-…` container or `G-…` measurement ID). The analytics scripts are omitted completely when blank. Review consent obligations and update the privacy/cookie text before enabling it.
 
 ## SEO checklist
 

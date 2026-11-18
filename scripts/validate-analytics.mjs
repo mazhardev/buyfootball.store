@@ -12,8 +12,8 @@ function filesIn(directory) {
   });
 }
 
-if (!/^G-[A-Z0-9]+$/u.test(measurementId)) {
-  errors.push("NEXT_PUBLIC_GA_ID must be a valid GA4 measurement ID during the production build.");
+if (!/^(?:G|GTM)-[A-Z0-9]+$/u.test(measurementId)) {
+  errors.push("NEXT_PUBLIC_GA_ID must be a valid Google tag ID (GTM-… or G-…) during the production build.");
 } else {
   const outputFiles = filesIn(resolve("out")).filter((file) => /\.(?:html|js)$/u.test(file));
   const analyticsBundled = outputFiles.some((file) => readFileSync(file, "utf8").includes(measurementId));

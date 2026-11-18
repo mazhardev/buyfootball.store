@@ -16,7 +16,7 @@ Primary outcomes are qualified product, custom and wholesale inquiries—not raw
 
 Recommended events: `view_item`, `select_item_variant`, `add_to_cart`, `view_cart`, `begin_order_request`, `contact_whatsapp`, `contact_email`, `generate_lead` and `view_guide`. Send product ID/category/value/currency and non-sensitive interaction context only. Never send names, phone numbers, email addresses, message text, delivery addresses or artwork details to analytics.
 
-GA4 measurement ID `G-MGHKB74B4J` is configured for production builds through the GitHub repository variable `NEXT_PUBLIC_GA_ID`. Complete the consent/privacy review for every served market, exclude internal traffic where practical, document retention, and reconcile analytics trends with actual qualified inquiries. Numbers from different systems will not match exactly.
+Google tag `GTM-P2RD6SJD` (GA4 "Install manually" container) is configured for production builds through the GitHub repository variable `NEXT_PUBLIC_GA_ID`. Complete the consent/privacy review for every served market, exclude internal traffic where practical, document retention, and reconcile analytics trends with actual qualified inquiries. Numbers from different systems will not match exactly.
 
 ## Cadence
 
